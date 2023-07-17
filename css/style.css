@@ -18,7 +18,7 @@ body {
 .content {
   background-color: #fff;
   border-radius: 15px;
-  width: 80%;
+  width: 960px;
   height: 50%;
   justify-content: space-between;
   align-items: center;
@@ -31,10 +31,13 @@ body {
   background-color: #c54b92;
   width: 40%;
   height: 100%;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+
+  left: 60%;
 }
 
 .title {
-  color: #fff;
   font-size: 28px;
   font-weight: bold;
   text-transform: capitalize;
@@ -43,12 +46,22 @@ body {
 .title-primary {
   color: #fff;
 }
+.title-second {
+  color: #c54b92;
+}
 
 .description {
   font-size: 14px;
   font-weight: 300;
-  color: #fff;
   line-height: 30px;
+}
+
+.description-primary {
+  color: #fff;
+}
+
+.description-second {
+  color: #bdc3c7;
 }
 
 .btn {
@@ -59,6 +72,10 @@ body {
   padding: 10px 50px;
   cursor: pointer;
   font-weight: bold;
+  width: 150px;
+  align-self: center;
+  border-width: 0;
+  margin-top: 1rem;
 }
 
 .btn-primary {
@@ -71,30 +88,103 @@ body {
   color: #c54b92;
 }
 
+.btn-second {
+  border: 1px solid #c54b92;
+  background-color: #c54b92;
+}
+
+.btn-second:hover {
+  background-color: #fff;
+  color: #c54b92;
+}
+
 .first-content {
-  display: flex;
+  display: none;
 }
 
 .first-column {
   text-align: center;
   flex: 1 0 auto;
-  z-index: 1;
+  z-index: 10;
 }
 
 .second-column {
   flex: 2 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-media {
+  margin: 1rem 0;
 }
 
 .list-social-media {
   display: flex;
+  list-style-type: none;
+}
+
+.item-social-media {
+  border: 1px solid #bdc3c7;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  color: #95a5a6;
+}
+.link-social-media:not(:first-child) {
+  margin-left: 10px;
+}
+
+.link-social-media:hover .item-social-media {
+  background-color: #c54b92;
+  color: #fff;
+  border: #c54b92;
 }
 
 .form {
   display: flex;
   flex-direction: column;
+  width: 55%;
 }
 
+.form input {
+  height: 45px;
+  border: none;
+  background-color: #ecf0f1;
+  width: 100%;
+}
+
+.label-input {
+  background-color: #ecf0f1;
+  display: flex;
+  align-items: center;
+  margin: 8px;
+}
+
+.icon-modify {
+  color: #7f8c8d;
+  padding: 0 5px;
+}
+
+/*  SECOND CONTENT */
 .second-content {
-  display: none;
+  display: flex;
   position: absolute;
+}
+
+.second-content .first-column {
+  order: 2;
+}
+
+.second-content .second-column {
+  order: 1;
+}
+
+.password {
+  color: #7f8c8d;
+  font-size: 14px;
+  margin: 15px 0;
+  text-align: center;
 }
